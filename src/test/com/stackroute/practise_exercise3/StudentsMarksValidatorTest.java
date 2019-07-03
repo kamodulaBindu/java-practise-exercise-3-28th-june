@@ -26,12 +26,22 @@ public class StudentsMarksValidatorTest {
             expectedresult = "marks are valid";
             assertEquals(expectedresult,actualresult);
         }
+        @Test
     public void validateMarks()
     {
         int students=10;
         int[] marks = {76,909,52,12,76,34,72,20,803,40};
         actualresult = studentsMarksValidator.validateMarks(students,marks);
         expectedresult = "909 is invalid";
+        assertEquals(expectedresult,actualresult);
+    }
+    @Test
+    public void validateMarksOfStudents()
+    {
+        int students= 0 ;
+        int[] marks = {};
+        actualresult = studentsMarksValidator.validateMarks(students,marks);
+        expectedresult = null;
         assertEquals(expectedresult,actualresult);
     }
         @After

@@ -25,6 +25,7 @@ public class ChessBoardPatternTest {
     }
     @After
     public void tearDown(){
+
         chessBoardPattern=null;
     }
 }

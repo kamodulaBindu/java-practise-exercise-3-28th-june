@@ -8,26 +8,35 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RemoveVowelsTest {
-    RemoveVowels sort;
+    RemoveVowels removeVowels;
     String[] actualresult;
     String[] expectedresult;
     @Before
     public void setUp()throws Exception {
-        sort = new RemoveVowels();
+        removeVowels = new RemoveVowels();
     }
 
     @Test
-    public void sortAndSumOfEvenNumbers()
+    public void givenStringArrayMustReturnStringsWithoutVowels()
     {
         String input[] = {"India","United States","Germany","Egypt","czechoslovakia"};
         String output[] = {"Ind","Untd Stts", "Grmny","Egypt", "czchslvk"};
-        actualresult = sort.removeVowels(input);
+        actualresult = removeVowels.removeVowels(input);
+        expectedresult = output;
+        assertArrayEquals(expectedresult,actualresult);
+    }
+    @Test
+    public void givenEmptyStringMustReturnNull()
+    {
+        String input[] = {};
+        String output[] = null;
+        actualresult = removeVowels.removeVowels(input);
         expectedresult = output;
         assertArrayEquals(expectedresult,actualresult);
     }
     @After
     public void tearDown(){
-        sort = null;
+        removeVowels = null;
     }
 
 

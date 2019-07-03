@@ -1,6 +1,7 @@
 package main.java.com.stackroute.practise_exercise3;
 
 public class Exceptions {
+    //method to check Exceptions in String
     public String checkExceptions(String string) {
         String str;
         try {

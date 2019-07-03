@@ -23,6 +23,11 @@ public class CheckForConsecutiveNumbersTest {
         String result=checkForConsecutiveNumbers.CheckConsecutive(new int[]{1,2,3,6,8},4);
         assertEquals(" 1,2,3,6,8 are not consecutive",result);
     }
+    @Test
+    public void givenEmptyArrayMustReturnNull(){
+        String result=checkForConsecutiveNumbers.CheckConsecutive(new int[]{},0);
+        assertEquals(null,result);
+    }
     @After
     public void tearDown(){
         checkForConsecutiveNumbers=null;
